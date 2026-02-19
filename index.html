@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client-side Lab</title>
+</head>
+<body>
+
+<h2>ทดลองเขียนสคริปต์ฝั่งไคลเอนท์</h2>
+
+<input type="text" id="username" placeholder="กรอกชื่อของคุณ">
+<button onclick="showMessage()">แสดงผล</button>
+
+<p id="result"></p>
+
+<script>
+function showMessage() {
+    let name = document.getElementById("username").value;
+    
+    if(name === "") {
+        document.getElementById("result").innerHTML = "กรุณากรอกชื่อก่อนดำเนินการ";
+    } else {
+        document.getElementById("result").innerHTML = "สวัสดี " + name;
+    }
+}
+</script>
+
+</body>
+</html>
