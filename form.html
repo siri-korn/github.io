@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html>
 <body>
+<form>
 
-<h2>HTML Forms</h2>
+<label for="email">อีเมล</label>
+<input type="email" id="email" name="email">
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-  <input type="text" id="username">
-<button onclick="check()">Submit</button>
+<br><br>
 
-<script>
-function check(){
-  let name = document.getElementById("username").value;
-  if(name == ""){
-    alert("กรุณากรอกชื่อ");
-  }
-}
-</script>
+<label for="password">รหัสผ่าน</label>
+<input type="password" id="password" name="password">
 
-</form> 
+<br><br>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<button type="submit">เข้าสู่ระบบ</button>
+
+</form>
 
 </body>
 </html>
