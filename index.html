@@ -2,63 +2,113 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>ประวัติพี่เอ็ม ออนิว</title>
+    
+    <style>
+        body {
+            background-color: #2d004d; /* เปลี่ยนสีพื้นหลังเป็นสีม่วงเข้ม [cite: 22] */
+            color: #ffffff;            /* สีตัวอักษรขาว */
+            font-family: 'Sarabun', sans-serif; /* ปรับรูปแบบตัวอักษร [cite: 23] */
+            text-align: center;        /* จัดตำแหน่งข้อความกึ่งกลาง [cite: 24] */
+            padding: 40px;
+            margin: 0;
+        }
 
+        .container {
+            background-color: #4a0072; /* สีม่วงสำหรับกล่องเนื้อหา */
+            border: 4px solid #9d4edd; /* ขอบสีม่วงสว่าง */
+            padding: 30px;
+            border-radius: 25px;
+            display: inline-block;
+            max-width: 550px;
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+        }
+
+        img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 15px;
+            border: 3px solid #ffffff;
+            margin: 20px 0;
+        }
+
+        ul {
+            text-align: left; /* รายการแบบ List [cite: 18] */
+            display: inline-block;
+            color: #e0aaff;
+        }
+
+        a {
+            color: #ff9e00; /* ลิงก์ภายนอก [cite: 19] */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .js-section {
+            margin-top: 20px;
+            border-top: 1px solid #7b2cbf;
+            padding-top: 20px;
+        }
+
+        button {
+            background-color: #7b2cbf;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #7b2cbf;
+        }
+    </style>
+</head>
 <body>
 
-    <!-- ส่วนหัว -->
-    <header>
-        <h1>My Profile Website</h1>
-        <p>เว็บไซต์แนะนำตัวนักศึกษา</p>
-    </header>
-
-    <!-- โปรไฟล์ -->
-    <section class="profile">
-        <img src="images/profile.jpg" alt="profile picture">
-
-        <h2>ชื่อ-นามสกุล</h2>
-        <p>สาขาเทคโนโลยีดิจิทัลมีเดีย</p>
-    </section>
-
-    <!-- ประวัติ -->
-    <section class="card">
-        <h2>ประวัติการศึกษา</h2>
-        <ul>
-            <li>ประถมศึกษา : โรงเรียน................</li>
-            <li>มัธยมศึกษา : โรงเรียนสุรนารีวิทยา</li>
-            <li>ปัจจุบัน : มหาวิทยาลัย................</li>
+    <div class="container">
+        <h1>ประวัติพี่เอ็ม ออนิว</h1> <img src="https://thethaiger.com/th/wp-content/uploads/2025/12/594963086_1375335617269806_7515055704741260771_n.jpg" alt="พี่เอ็ม ออนิว">
+        
+        <p>หน้านี้สร้างขึ้นเพื่อแนะนำพื้นฐานการสร้างเว็บไซต์ด้วย HTML และ CSS</p> <h3>ความสามารถ 108 อย่างของนโปเลียนพี่เอ็ม ออนิว</h3>
+        <ul> <li>ขับเครื่องบินได้</li>
+            <li>ปลอมตัวได้หลากหลายชุด</li>
+            <li>กินน้ำแข็งได้</li>
         </ul>
-    </section>
 
-    <!-- ทักษะ -->
-    <section class="card">
-        <h2>ทักษะความสามารถ</h2>
-        <ul>
-            <li>การออกแบบกราฟิก (Photoshop / Canva)</li>
-            <li>การถ่ายภาพ</li>
-            <li>ตัดต่อวิดีโอ</li>
-            <li>HTML พื้นฐาน</li>
-        </ul>
-    </section>
+        <p>
+            <a href="https://thethaiger.com/th/news/1498731/" target="_blank">อ่านข่าวเพิ่มเติมเกี่ยวกับพี่เอ็ม</a> </p>
 
-    <!-- ติดต่อ -->
-    <section class="card">
-        <h2>ช่องทางติดต่อ</h2>
-        <p>Email: yourmail@email.com</p>
-        <p>Facebook: fb.me/username</p>
-        <p>Instagram: @username</p>
-    </section>
+        <div class="js-section">
+            <button onclick="welcomeAlert()">แสดงข้อความต้อนรับ</button> 
+            
+            <br>
 
-    <!-- ส่วนท้าย -->
-    <footer>
-        <p>© 2026 My Profile Website</p>
-    </footer>
+            <input type="text" id="userInput" placeholder="กรอกชื่อของคุณ">
+            <button onclick="sayHello()">ทักทาย</button> 
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        
+        function welcomeAlert() {
+            alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน"); 
+        }
+
+        
+        function sayHello() {
+            const name = document.getElementById("userInput").value;
+            if (name) {
+                document.getElementById("result").innerText = "สวัสดี " + name + " ยินดีต้อนรับ"; 
+            } else {
+                alert("กรุณากรอกชื่อก่อนครับ");
+            }
+        }
+    </script>
 
 </body>
-
 </html>
-
-
